@@ -21,6 +21,7 @@ public class ActividadEntradaPuerta implements Runnable{
 			for (int i = 0; i < NUMENTRADAS; i ++) {
 				try {
 					parque.entrarAlParque(puerta);
+					System.out.println("****Número de entradas puerta "+puerta+"="+(i+1));
 					TimeUnit.MILLISECONDS.sleep(new Random().nextInt(5)*1000);
 				} catch (InterruptedException e) {
 					Logger.getGlobal().log(Level.INFO, "Entrada interrumpida");
